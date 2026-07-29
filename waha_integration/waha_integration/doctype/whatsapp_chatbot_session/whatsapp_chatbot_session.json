@@ -1,0 +1,87 @@
+{
+ "actions": [],
+ "creation": "2026-07-29 15:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "chat_id",
+  "account",
+  "flow",
+  "current_step_index",
+  "column_break_1",
+  "is_paused",
+  "pause_until",
+  "session_data_json"
+ ],
+ "fields": [
+  {
+   "fieldname": "chat_id",
+   "fieldtype": "Data",
+   "label": "Chat ID",
+   "reqd": 1
+  },
+  {
+   "fieldname": "account",
+   "fieldtype": "Link",
+   "label": "WhatsApp Account",
+   "options": "WhatsApp Account"
+  },
+  {
+   "fieldname": "flow",
+   "fieldtype": "Link",
+   "label": "Active Chatbot Flow",
+   "options": "WhatsApp Chatbot Flow"
+  },
+  {
+   "default": "0",
+   "fieldname": "current_step_index",
+   "fieldtype": "Int",
+   "label": "Current Step Index"
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_paused",
+   "fieldtype": "Check",
+   "label": "Paused for Human Agent"
+  },
+  {
+   "fieldname": "pause_until",
+   "fieldtype": "Datetime",
+   "label": "Pause Until"
+  },
+  {
+   "fieldname": "session_data_json",
+   "fieldtype": "Code",
+   "label": "Session Data JSON",
+   "options": "JSON"
+  }
+ ],
+ "links": [],
+ "modified": "2026-07-29 15:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "WAHA Integration",
+ "name": "WhatsApp Chatbot Session",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

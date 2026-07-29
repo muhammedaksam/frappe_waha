@@ -1,0 +1,141 @@
+{
+ "actions": [],
+ "creation": "2026-07-29 15:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "account",
+  "direction",
+  "chat_id",
+  "sender",
+  "receiver",
+  "column_break_1",
+  "message_type",
+  "status",
+  "waha_message_id",
+  "reference_doctype",
+  "reference_name",
+  "section_content",
+  "content",
+  "media_url",
+  "media_file",
+  "error_message"
+ ],
+ "fields": [
+  {
+   "fieldname": "account",
+   "fieldtype": "Link",
+   "label": "WhatsApp Account",
+   "options": "WhatsApp Account",
+   "reqd": 1
+  },
+  {
+   "fieldname": "direction",
+   "fieldtype": "Select",
+   "label": "Direction",
+   "options": "Incoming\nOutgoing",
+   "reqd": 1
+  },
+  {
+   "fieldname": "chat_id",
+   "fieldtype": "Data",
+   "label": "Chat ID",
+   "reqd": 1
+  },
+  {
+   "fieldname": "sender",
+   "fieldtype": "Data",
+   "label": "Sender Phone"
+  },
+  {
+   "fieldname": "receiver",
+   "fieldtype": "Data",
+   "label": "Receiver Phone"
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "text",
+   "fieldname": "message_type",
+   "fieldtype": "Select",
+   "label": "Message Type",
+   "options": "text\nimage\nvideo\naudio\nvoice\ndocument\nlocation\ncontact\ninteractive\ntemplate"
+  },
+  {
+   "default": "Pending",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Pending\nSent\nDelivered\nRead\nFailed\nReceived"
+  },
+  {
+   "fieldname": "waha_message_id",
+   "fieldtype": "Data",
+   "label": "WAHA Message ID"
+  },
+  {
+   "fieldname": "reference_doctype",
+   "fieldtype": "Link",
+   "label": "Reference DocType",
+   "options": "DocType"
+  },
+  {
+   "fieldname": "reference_name",
+   "fieldtype": "Dynamic Link",
+   "label": "Reference Name",
+   "options": "reference_doctype"
+  },
+  {
+   "fieldname": "section_content",
+   "fieldtype": "Section Break",
+   "label": "Message Content"
+  },
+  {
+   "fieldname": "content",
+   "fieldtype": "Text",
+   "label": "Text Content"
+  },
+  {
+   "fieldname": "media_url",
+   "fieldtype": "Data",
+   "label": "Media URL"
+  },
+  {
+   "fieldname": "media_file",
+   "fieldtype": "Attach",
+   "label": "Media Attachment File"
+  },
+  {
+   "fieldname": "error_message",
+   "fieldtype": "Text",
+   "label": "Error Message",
+   "read_only": 1
+  }
+ ],
+ "links": [],
+ "modified": "2026-07-29 15:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "WAHA Integration",
+ "name": "WhatsApp Message",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

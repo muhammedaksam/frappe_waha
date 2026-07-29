@@ -1,0 +1,88 @@
+{
+ "actions": [],
+ "creation": "2026-07-29 15:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "enabled",
+  "provider",
+  "api_key",
+  "model_name",
+  "column_break_1",
+  "system_prompt",
+  "enable_rag",
+  "rag_doctypes"
+ ],
+ "fields": [
+  {
+   "default": "0",
+   "fieldname": "enabled",
+   "fieldtype": "Check",
+   "label": "Enable AI Fallback Engine"
+  },
+  {
+   "default": "OpenAI",
+   "fieldname": "provider",
+   "fieldtype": "Select",
+   "label": "AI Provider",
+   "options": "OpenAI\nAnthropic\nGemini"
+  },
+  {
+   "fieldname": "api_key",
+   "fieldtype": "Password",
+   "label": "API Key"
+  },
+  {
+   "default": "gpt-4o-mini",
+   "fieldname": "model_name",
+   "fieldtype": "Data",
+   "label": "Model Name"
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "You are a helpful customer service AI assistant for ERPNext. Answer user questions politely, accurately, and concisely.",
+   "fieldname": "system_prompt",
+   "fieldtype": "Text",
+   "label": "System Prompt"
+  },
+  {
+   "default": "0",
+   "fieldname": "enable_rag",
+   "fieldtype": "Check",
+   "label": "Search ERPNext Items & FAQs"
+  },
+  {
+   "fieldname": "rag_doctypes",
+   "fieldtype": "Data",
+   "label": "DocTypes to Context Search (Comma-separated, e.g., Item)"
+  }
+ ],
+ "issingle": 1,
+ "links": [],
+ "modified": "2026-07-29 15:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "WAHA Integration",
+ "name": "WhatsApp AI Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

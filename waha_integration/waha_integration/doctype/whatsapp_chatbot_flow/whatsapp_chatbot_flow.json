@@ -1,0 +1,68 @@
+{
+ "actions": [],
+ "creation": "2026-07-29 15:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "flow_name",
+  "enabled",
+  "create_doctype",
+  "section_steps",
+  "steps"
+ ],
+ "fields": [
+  {
+   "fieldname": "flow_name",
+   "fieldtype": "Data",
+   "label": "Flow Name",
+   "reqd": 1
+  },
+  {
+   "default": "1",
+   "fieldname": "enabled",
+   "fieldtype": "Check",
+   "label": "Enabled"
+  },
+  {
+   "fieldname": "create_doctype",
+   "fieldtype": "Link",
+   "label": "Target DocType to Auto-Create (Optional)",
+   "options": "DocType"
+  },
+  {
+   "fieldname": "section_steps",
+   "fieldtype": "Section Break",
+   "label": "Flow Steps"
+  },
+  {
+   "fieldname": "steps",
+   "fieldtype": "Table",
+   "label": "Steps",
+   "options": "WhatsApp Chatbot Step"
+  }
+ ],
+ "links": [],
+ "modified": "2026-07-29 15:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "WAHA Integration",
+ "name": "WhatsApp Chatbot Flow",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

@@ -1,0 +1,1 @@
+# WhatsApp Message Doctype

@@ -1,0 +1,104 @@
+{
+ "actions": [],
+ "creation": "2026-07-29 15:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "rule_title",
+  "enabled",
+  "match_type",
+  "keywords",
+  "column_break_1",
+  "response_type",
+  "reply_text",
+  "reply_media",
+  "python_script",
+  "chatbot_flow"
+ ],
+ "fields": [
+  {
+   "fieldname": "rule_title",
+   "fieldtype": "Data",
+   "label": "Rule Title",
+   "reqd": 1
+  },
+  {
+   "default": "1",
+   "fieldname": "enabled",
+   "fieldtype": "Check",
+   "label": "Enabled"
+  },
+  {
+   "default": "Contains",
+   "fieldname": "match_type",
+   "fieldtype": "Select",
+   "label": "Match Type",
+   "options": "Exact\nContains\nStartsWith\nRegex",
+   "reqd": 1
+  },
+  {
+   "fieldname": "keywords",
+   "fieldtype": "Small Text",
+   "label": "Keywords (Comma-separated)",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Text",
+   "fieldname": "response_type",
+   "fieldtype": "Select",
+   "label": "Response Type",
+   "options": "Text\nMedia\nScript\nFlow",
+   "reqd": 1
+  },
+  {
+   "fieldname": "reply_text",
+   "fieldtype": "Text",
+   "label": "Reply Text"
+  },
+  {
+   "fieldname": "reply_media",
+   "fieldtype": "Attach",
+   "label": "Reply Media Attachment"
+  },
+  {
+   "fieldname": "python_script",
+   "fieldtype": "Code",
+   "label": "Python Script",
+   "options": "Python"
+  },
+  {
+   "fieldname": "chatbot_flow",
+   "fieldtype": "Link",
+   "label": "Chatbot Flow",
+   "options": "WhatsApp Chatbot Flow"
+  }
+ ],
+ "links": [],
+ "modified": "2026-07-29 15:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "WAHA Integration",
+ "name": "WhatsApp Keyword Reply",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

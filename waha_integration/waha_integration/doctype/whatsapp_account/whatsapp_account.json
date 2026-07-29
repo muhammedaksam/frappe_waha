@@ -1,0 +1,114 @@
+{
+ "actions": [],
+ "creation": "2026-07-29 15:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "title",
+  "enabled",
+  "is_default",
+  "session_name",
+  "status",
+  "column_break_1",
+  "server_url",
+  "api_key",
+  "webhook_token",
+  "section_qr",
+  "qr_code_html",
+  "section_actions"
+ ],
+ "fields": [
+  {
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "label": "Account Title",
+   "reqd": 1
+  },
+  {
+   "default": "1",
+   "fieldname": "enabled",
+   "fieldtype": "Check",
+   "label": "Enabled"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_default",
+   "fieldtype": "Check",
+   "label": "Is Default Account"
+  },
+  {
+   "default": "default",
+   "fieldname": "session_name",
+   "fieldtype": "Data",
+   "label": "WAHA Session Name",
+   "reqd": 1
+  },
+  {
+   "default": "STOPPED",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Session Status",
+   "options": "STOPPED\nSTARTING\nSCAN_QR_CODE\nWORKING\nFAILED",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "http://localhost:3000",
+   "fieldname": "server_url",
+   "fieldtype": "Data",
+   "label": "WAHA Server URL",
+   "reqd": 1
+  },
+  {
+   "fieldname": "api_key",
+   "fieldtype": "Password",
+   "label": "WAHA API Key"
+  },
+  {
+   "fieldname": "webhook_token",
+   "fieldtype": "Data",
+   "label": "Webhook Verify Token"
+  },
+  {
+   "fieldname": "section_qr",
+   "fieldtype": "Section Break",
+   "label": "QR Code / Authentication"
+  },
+  {
+   "fieldname": "qr_code_html",
+   "fieldtype": "HTML",
+   "label": "QR Code HTML"
+  },
+  {
+   "fieldname": "section_actions",
+   "fieldtype": "Section Break"
+  }
+ ],
+ "links": [],
+ "modified": "2026-07-29 15:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "WAHA Integration",
+ "name": "WhatsApp Account",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

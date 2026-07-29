@@ -1,0 +1,1 @@
+# WhatsApp Campaign Doctype

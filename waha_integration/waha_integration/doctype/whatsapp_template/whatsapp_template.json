@@ -1,0 +1,101 @@
+{
+ "actions": [],
+ "creation": "2026-07-29 15:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "template_name",
+  "category",
+  "language",
+  "for_doctype",
+  "column_break_1",
+  "header_type",
+  "header_text",
+  "section_body",
+  "body_text",
+  "footer_text"
+ ],
+ "fields": [
+  {
+   "fieldname": "template_name",
+   "fieldtype": "Data",
+   "label": "Template Name",
+   "reqd": 1
+  },
+  {
+   "default": "UTILITY",
+   "fieldname": "category",
+   "fieldtype": "Select",
+   "label": "Category",
+   "options": "MARKETING\nUTILITY\nAUTHENTICATION"
+  },
+  {
+   "default": "en",
+   "fieldname": "language",
+   "fieldtype": "Data",
+   "label": "Language Code"
+  },
+  {
+   "fieldname": "for_doctype",
+   "fieldtype": "Link",
+   "label": "For DocType",
+   "options": "DocType"
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "TEXT",
+   "fieldname": "header_type",
+   "fieldtype": "Select",
+   "label": "Header Type",
+   "options": "NONE\nTEXT\nIMAGE\nDOCUMENT"
+  },
+  {
+   "fieldname": "header_text",
+   "fieldtype": "Data",
+   "label": "Header Text"
+  },
+  {
+   "fieldname": "section_body",
+   "fieldtype": "Section Break",
+   "label": "Body & Footer"
+  },
+  {
+   "fieldname": "body_text",
+   "fieldtype": "Text",
+   "label": "Body Text",
+   "reqd": 1
+  },
+  {
+   "fieldname": "footer_text",
+   "fieldtype": "Data",
+   "label": "Footer Text"
+  }
+ ],
+ "links": [],
+ "modified": "2026-07-29 15:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "WAHA Integration",
+ "name": "WhatsApp Template",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

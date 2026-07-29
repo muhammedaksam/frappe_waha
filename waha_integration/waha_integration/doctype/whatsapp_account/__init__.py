@@ -1,0 +1,1 @@
+# WhatsApp Account Doctype

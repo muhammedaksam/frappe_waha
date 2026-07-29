@@ -1,0 +1,1 @@
+# WhatsApp AI Settings Doctype

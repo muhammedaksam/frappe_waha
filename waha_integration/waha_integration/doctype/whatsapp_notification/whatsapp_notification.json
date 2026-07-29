@@ -1,0 +1,150 @@
+{
+ "actions": [],
+ "creation": "2026-07-29 15:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "title",
+  "enabled",
+  "account",
+  "document_type",
+  "event",
+  "condition",
+  "column_break_1",
+  "recipient_field",
+  "static_phone",
+  "print_format",
+  "attach_pdf",
+  "section_message",
+  "message_template",
+  "message_body",
+  "section_post_send",
+  "set_field_after_send",
+  "set_value_after_send"
+ ],
+ "fields": [
+  {
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "label": "Notification Name",
+   "reqd": 1
+  },
+  {
+   "default": "1",
+   "fieldname": "enabled",
+   "fieldtype": "Check",
+   "label": "Enabled"
+  },
+  {
+   "fieldname": "account",
+   "fieldtype": "Link",
+   "label": "WhatsApp Account",
+   "options": "WhatsApp Account",
+   "reqd": 1
+  },
+  {
+   "fieldname": "document_type",
+   "fieldtype": "Link",
+   "label": "Document Type",
+   "options": "DocType",
+   "reqd": 1
+  },
+  {
+   "default": "after_insert",
+   "fieldname": "event",
+   "fieldtype": "Select",
+   "label": "Trigger Event",
+   "options": "before_insert\nafter_insert\non_update\non_submit\non_cancel\non_trash\nHourly\nDaily\nWeekly",
+   "reqd": 1
+  },
+  {
+   "fieldname": "condition",
+   "fieldtype": "Code",
+   "label": "Condition (Python / Jinja)",
+   "options": "Python"
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "mobile_no",
+   "fieldname": "recipient_field",
+   "fieldtype": "Data",
+   "label": "Recipient Phone Field (DocType)"
+  },
+  {
+   "fieldname": "static_phone",
+   "fieldtype": "Data",
+   "label": "Static Recipient Phone Number"
+  },
+  {
+   "fieldname": "print_format",
+   "fieldtype": "Link",
+   "label": "Print Format (for PDF)",
+   "options": "Print Format"
+  },
+  {
+   "default": "0",
+   "fieldname": "attach_pdf",
+   "fieldtype": "Check",
+   "label": "Attach Document PDF"
+  },
+  {
+   "fieldname": "section_message",
+   "fieldtype": "Section Break",
+   "label": "Message Definition"
+  },
+  {
+   "fieldname": "message_template",
+   "fieldtype": "Link",
+   "label": "WhatsApp Template",
+   "options": "WhatsApp Template"
+  },
+  {
+   "fieldname": "message_body",
+   "fieldtype": "Text",
+   "label": "Message Body (Jinja template)",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_post_send",
+   "fieldtype": "Section Break",
+   "label": "Post-Send Update"
+  },
+  {
+   "fieldname": "set_field_after_send",
+   "fieldtype": "Data",
+   "label": "Set Field After Send"
+  },
+  {
+   "fieldname": "set_value_after_send",
+   "fieldtype": "Data",
+   "label": "Value to Set"
+  }
+ ],
+ "links": [],
+ "modified": "2026-07-29 15:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "WAHA Integration",
+ "name": "WhatsApp Notification",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
