@@ -4,7 +4,7 @@ authors = [
     { name = "Muhammed Mustafa AKŞAM", email = "info@muhammedaksam.com.tr"}
 ]
 description = "WhatsApp Integration for Frappe & ERPNext using WAHA"
-requires-python = ">=3.14"
+requires-python = ">=3.10"
 readme = "README.md"
 dynamic = ["version"]
 dependencies = [
@@ -17,6 +17,9 @@ dependencies = [
 [project.urls]
 Homepage = "https://github.com/muhammedaksam/frappe_waha"
 Repository = "https://github.com/muhammedaksam/frappe_waha"
+
+[tool.bench.frappe-dependencies]
+frappe = ">=14.0.0,<16.0.0"
 
 [build-system]
 requires = ["flit_core >=3.4,<4"]
