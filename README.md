@@ -60,7 +60,7 @@ Click the floating WhatsApp chat bubble in Frappe Desk to open the live conversa
 
 ## 🛠️ Tech Stack & SDK
 
-- **SDK**: Built with [waha-py](https://github.com/devlikeapro/waha) (WhatsApp HTTP API SDK).
+- **SDK**: Built with [waha-py](https://github.com/muhammedaksam/waha-py) (WhatsApp HTTP API SDK).
 - **Framework**: Frappe Framework (v14 / v15) & ERPNext.
 
 ---

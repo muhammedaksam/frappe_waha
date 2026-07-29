@@ -8,7 +8,7 @@ requires-python = ">=3.14"
 readme = "README.md"
 dynamic = ["version"]
 dependencies = [
-    "waha-py>=2026.7.1",
+    "waha-py @ git+https://github.com/muhammedaksam/waha-py.git",
     "httpx>=0.24.0",
     "pydantic>=2.0.0",
     "requests>=2.25.0"
