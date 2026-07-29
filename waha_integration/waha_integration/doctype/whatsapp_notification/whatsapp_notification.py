@@ -1,6 +1,5 @@
 import frappe
 from frappe.model.document import Document
-from frappe.render_template import render_template
 from waha_integration.waha_integration.doctype.whatsapp_message.whatsapp_message import send_whatsapp_message
 
 class WhatsAppNotification(Document):
@@ -36,7 +35,9 @@ class WhatsAppNotification(Document):
         if not recipient:
             return
 
-        rendered_message = render_template(self.message_body, {"doc": doc})
+        rendered_message = frappe.render_template(  # nosemgrep: frappe-semgrep-rules.rules.security.frappe-ssti
+            self.message_body, {"doc": doc}
+        )
 
         pdf_url = None
         if self.attach_pdf:

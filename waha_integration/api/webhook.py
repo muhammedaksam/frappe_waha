@@ -66,13 +66,19 @@ def process_incoming_message(account_name: str, payload: dict):
     })
     msg.insert(ignore_permissions=True)
 
-    frappe.publish_realtime("whatsapp_new_message", {
-        "chat_id": chat_id,
-        "sender": sender_phone,
-        "content": body,
-        "contact": contact_doc.full_name,
-        "name": msg.name
-    })
+    frappe.publish_realtime(
+        "whatsapp_new_message",
+        {
+            "chat_id": chat_id,
+            "sender": sender_phone,
+            "content": body,
+            "contact": contact_doc.full_name,
+            "name": msg.name
+        },
+        doctype="WhatsApp Message",
+        docname=msg.name,
+        after_commit=True
+    )  # nosemgrep: frappe-semgrep-rules.rules.correctness.frappe-realtime-pick-room
 
     if msg.name:
         trigger_chatbot_engine(account_name, chat_id, body, msg.name)

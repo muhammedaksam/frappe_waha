@@ -24,37 +24,27 @@ A feature-complete, modern WhatsApp integration app for **Frappe Framework** and
 
 ---
 
-## 🚀 Installation
-
-Navigate to your Frappe bench directory and run:
-
-```bash
-# 1. Get the app from GitHub
-bench get-app https://github.com/muhammedaksam/frappe_waha
-
-# 2. Install app on your site
-bench --site [your-site-name] install-app waha_integration
-
-# 3. Build Desk assets
-bench build --app waha_integration
-```
-
----
-
-## ⚙️ Quick Setup
+## ⚙️ Overview & Setup
 
 ### 1. Configure WhatsApp Account
+
 1. Open **WhatsApp Account** in Frappe Desk.
 2. Enter your **WAHA Server URL** (e.g. `http://localhost:3000`), **API Key**, and **WAHA Session Name**.
 3. Click **Start Session** and then **Get QR Code** to scan and authenticate your WhatsApp account.
 
 ### 2. Configure Dynamic Notifications
+
 1. Go to **WhatsApp Notification**.
 2. Select target **DocType** (e.g. `Sales Invoice`) and **Trigger Event** (`on_submit`).
 3. Set your Jinja template message body and check **Attach Document PDF**.
 
 ### 3. Real-time Desk Chat UI
+
 Click the floating WhatsApp chat bubble in Frappe Desk to open the live conversation drawer.
+
+### 4. Self-Hosted & Development Setup
+
+For manual CLI installation commands see [DEVELOPMENT.md](DEVELOPMENT.md).
 
 ---
 

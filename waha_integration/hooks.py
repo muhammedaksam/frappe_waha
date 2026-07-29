@@ -18,14 +18,66 @@ app_include_css = [
 ]
 
 # Document Events
+_trigger_notif = "waha_integration.waha_integration.doctype.whatsapp_notification.whatsapp_notification.trigger_notifications"
+
 doc_events = {
-	"*": {
-		"after_insert": "waha_integration.waha_integration.doctype.whatsapp_notification.whatsapp_notification.trigger_notifications",
-		"on_update": "waha_integration.waha_integration.doctype.whatsapp_notification.whatsapp_notification.trigger_notifications",
-		"on_submit": "waha_integration.waha_integration.doctype.whatsapp_notification.whatsapp_notification.trigger_notifications",
-		"on_cancel": "waha_integration.waha_integration.doctype.whatsapp_notification.whatsapp_notification.trigger_notifications",
-		"on_trash": "waha_integration.waha_integration.doctype.whatsapp_notification.whatsapp_notification.trigger_notifications"
-	}
+	"Sales Invoice": {
+		"after_insert": _trigger_notif,
+		"on_update": _trigger_notif,
+		"on_submit": _trigger_notif,
+		"on_cancel": _trigger_notif,
+		"on_trash": _trigger_notif,
+	},
+	"Sales Order": {
+		"after_insert": _trigger_notif,
+		"on_update": _trigger_notif,
+		"on_submit": _trigger_notif,
+		"on_cancel": _trigger_notif,
+		"on_trash": _trigger_notif,
+	},
+	"Quotation": {
+		"after_insert": _trigger_notif,
+		"on_update": _trigger_notif,
+		"on_submit": _trigger_notif,
+		"on_cancel": _trigger_notif,
+		"on_trash": _trigger_notif,
+	},
+	"Delivery Note": {
+		"after_insert": _trigger_notif,
+		"on_update": _trigger_notif,
+		"on_submit": _trigger_notif,
+		"on_cancel": _trigger_notif,
+		"on_trash": _trigger_notif,
+	},
+	"Payment Entry": {
+		"after_insert": _trigger_notif,
+		"on_update": _trigger_notif,
+		"on_submit": _trigger_notif,
+		"on_cancel": _trigger_notif,
+		"on_trash": _trigger_notif,
+	},
+	"Customer": {
+		"after_insert": _trigger_notif,
+		"on_update": _trigger_notif,
+		"on_trash": _trigger_notif,
+	},
+	"Lead": {
+		"after_insert": _trigger_notif,
+		"on_update": _trigger_notif,
+		"on_trash": _trigger_notif,
+	},
+	"Issue": {
+		"after_insert": _trigger_notif,
+		"on_update": _trigger_notif,
+		"on_trash": _trigger_notif,
+	},
+	"Purchase Order": {
+		"after_insert": _trigger_notif,
+		"on_update": _trigger_notif,
+		"on_submit": _trigger_notif,
+		"on_cancel": _trigger_notif,
+		"on_trash": _trigger_notif,
+	},
 }
 
 # Scheduled Tasks
